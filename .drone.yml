@@ -1,10 +1,58 @@
 ---
 kind: pipeline
-name: notifications
+name: linux-amd64
 
 platform:
   os: linux
   arch: amd64
+
+steps:
+  - name: docker
+    image: plugins/docker
+    settings:
+      repo: cnbattle/aigo
+      auto_tag: true
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+
+trigger:
+  ref:
+    - refs/heads/main
+    - "refs/tags/**"
+
+---
+kind: pipeline
+name: linux-arm64
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+  - name: docker
+    image: plugins/docker
+    settings:
+      repo: cnbattle/aigo
+      auto_tag: true
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+
+trigger:
+  ref:
+    - refs/heads/main
+    - "refs/tags/**"
+
+---
+kind: pipeline
+name: linux-arm
+
+platform:
+  os: linux
+  arch: arm
 
 steps:
   - name: docker
