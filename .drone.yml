@@ -7,16 +7,15 @@ platform:
   arch: amd64
 
 steps:
-  - name: manifest
-    pull: always
-    image: plugins/manifest
+  - name: docker
+    image: plugins/docker
     settings:
-      ignore_missing: true
+      repo: cnbattle/aigo
+      auto_tag: true
       username:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      spec: manifest.tmpl
 
 trigger:
   ref:
