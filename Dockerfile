@@ -1,4 +1,4 @@
-FROM alpine
+FROM golang:1.16-alpine
 
 MAINTAINER cnbattle <qiaicn@gmail.com>
 
