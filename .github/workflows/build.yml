@@ -18,6 +18,5 @@ jobs:
         name: cnbattle/docker-go
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        tags: "build"
-        snapshot: true
+        tags: "build,build-${{ env.GITHUB_RUN_NUMBER }}"
         dockerfile: build.Dockerfile
