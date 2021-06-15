@@ -18,5 +18,5 @@ jobs:
         name: cnbattle/docker-go
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        tags: "runner"
+        tags: "runner,runner-$(date +'%Y-%m-%d')"
         dockerfile: Dockerfile
