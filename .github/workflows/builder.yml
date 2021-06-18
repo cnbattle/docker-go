@@ -23,5 +23,5 @@ jobs:
         name: cnbattle/docker-go
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        tags: "build,build-${{ env.MY_DATE }}"
+        tags: "builder,builder-${{ env.MY_DATE }}"
         dockerfile: Dockerfile.builder
