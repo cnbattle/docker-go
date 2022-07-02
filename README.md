@@ -2,7 +2,10 @@
 
 my base image for golang.
 
+https://hub.docker.com/r/cnbattle/docker-go
 
+
+## demo
 ```dockerfile
 FROM cnbattle/docker-go:builder as builder
 
