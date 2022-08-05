@@ -1,4 +1,4 @@
-FROM golang:1.18-alpine
+FROM golang:1.19-alpine
 
 LABEL maintainer="cnbattle@qiaicn@gmail.com"
 LABEL website="https://github.com/cnbattle/docker-go"
